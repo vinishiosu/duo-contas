@@ -4,7 +4,9 @@ Um mod para o Claude Code que junta **duas contas** (por exemplo, a da empresa e
 
 **Baixar:** o zip da versão mais nova fica em [Releases](https://github.com/vinishiosu/duo-contas/releases/latest).
 
-![Os Claudinhos: a conta empresa no notebook, a pessoal dançando](previa/claudinhos-v081.png)
+![Três sessões em cada conta: duas paradas e uma trabalhando](previa/claudinhos.gif)
+
+*Três sessões abertas em cada conta. Na empresa, o do meio está codando e os outros esperam no notebook; na pessoal, o do meio dança. A setinha **v** marca a sessão da janela em que você está.*
 
 ## O que ele faz
 
@@ -23,6 +25,8 @@ Um mod para o Claude Code que junta **duas contas** (por exemplo, a da empresa e
   - quando a empresa tem folga de novo (abaixo de 80%), a sua próxima mensagem volta para ela.
 - **Cuidado com trabalho em segundo plano.** Se há algo rodando em segundo plano (um comando, um subagente), a troca espera ele terminar. A partir de 98%, ou se uma resposta morrer no limite, ela troca mesmo assim, para a sessão não ficar congelada até a janela renovar, e avisa a sessão nova do que foi interrompido.
 - **Acorda a conta parada.** Se uma conta está sem janela de 5h correndo, ele manda um "oi" invisível (no modelo Haiku, custo mínimo) para a janela começar a contar.
+
+![Todos os estados: uma sessão, várias, no limite e dormindo](previa/claudinhos-v081.png)
 
 ![Com subagentes: trabalho em equipe e chefe de olho](previa/agentes-v09.png)
 

@@ -42,7 +42,7 @@ Copy-Item -LiteralPath $vsix.FullName -Destination (Join-Path $tmp 'vscode')
 foreach ($f in @('extension.js', 'package.json')) { Copy-Item -LiteralPath (Join-Path $ext $f) -Destination (Join-Path $tmp 'vscode\fonte') }
 
 New-Item -ItemType Directory -Force -Path (Join-Path $tmp 'previa') | Out-Null
-foreach ($f in @('claudinhos-v081.png', 'agentes-v09.png')) {
+foreach ($f in @('claudinhos.gif', 'claudinhos-v081.png', 'agentes-v09.png')) {
   $p = Join-Path $Raiz "previa\$f"
   if (Test-Path -LiteralPath $p) { Copy-Item -LiteralPath $p -Destination (Join-Path $tmp 'previa') }
 }
