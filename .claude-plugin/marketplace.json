@@ -1,0 +1,17 @@
+{
+  "name": "duo-contas-local",
+  "owner": {
+    "name": "vinishiosu",
+    "url": "https://github.com/vinishiosu/duo-contas"
+  },
+  "metadata": {
+    "description": "O mod duo-contas: duas contas do Claude Code num painel só."
+  },
+  "plugins": [
+    {
+      "name": "duo-contas",
+      "source": "./mod",
+      "description": "Duas contas do Claude Code num painel só: um Claudinho por sessão, uso de 5h e da semana, e troca de conta automática no limite (e volta quando a primeira tem folga)."
+    }
+  ]
+}

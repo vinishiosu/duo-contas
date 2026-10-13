@@ -1,0 +1,14 @@
+{
+  "name": "duo-contas-abas",
+  "displayName": "duo-contas: abas do terminal",
+  "description": "A ponte entre o mod duo-contas do Claude Code e as abas do terminal: os Claudinhos na ordem das abas, e o /trocar-conta continuando na mesma aba.",
+  "publisher": "vinishiosu",
+  "version": "0.2.0",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/vinishiosu/duo-contas" },
+  "private": true,
+  "engines": { "vscode": "^1.80.0" },
+  "main": "./extension.js",
+  "activationEvents": ["onStartupFinished"],
+  "contributes": {}
+}

@@ -1,0 +1,46 @@
+{
+  "name": "duo-contas",
+  "version": "0.13.0",
+  "description": "Painel com um Claudinho por sessão de cada conta (no notebook na empresa, o clássico na pessoal; menores quanto mais sessões) no lugar do claude-hud: janelas de 5h e 7 dias, contexto, cache e RAM; troca de conta no limite (nos dois sentidos, com teto que não espera o segundo plano), volta para a empresa quando ela tem folga e acorda a conta parada.",
+  "author": { "name": "vinishiosu", "url": "https://github.com/vinishiosu/duo-contas" },
+  "license": "MIT",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "limite": {
+      "type": "number",
+      "title": "Limite da conta empresa (%)",
+      "description": "Uso da janela de 5h (ou de 7 dias) a partir do qual a sessão passa para a outra conta. Com algo em segundo plano, a troca espera ele terminar.",
+      "default": 95
+    },
+    "teto": {
+      "type": "number",
+      "title": "Teto (%)",
+      "description": "Daqui para cima a troca não espera o segundo plano: encerra o que roda (e conta à sessão retomada o que foi) para a sessão não congelar até a janela renovar.",
+      "default": 98
+    },
+    "volta": {
+      "type": "number",
+      "title": "Volta para a empresa (%)",
+      "description": "Na conta pessoal, com a empresa abaixo disto (5h e 7 dias), a próxima mensagem volta para a empresa.",
+      "default": 80
+    },
+    "automatico": {
+      "type": "boolean",
+      "title": "Trocar de conta automaticamente",
+      "description": "Desligado, o mod só avisa; a troca fica no /trocar-conta.",
+      "default": true
+    },
+    "acordar": {
+      "type": "boolean",
+      "title": "Acordar conta sem janela de 5h",
+      "description": "Quando uma conta está sem janela de 5h ativa, manda um \"oi\" invisível (haiku) para a janela começar a contar.",
+      "default": true
+    },
+    "cacheMinutos": {
+      "type": "number",
+      "title": "Validade do cache (min)",
+      "description": "Quanto o cache de prompt dura depois da última resposta: 60 nas assinaturas, 5 fora delas.",
+      "default": 60
+    }
+  }
+}
